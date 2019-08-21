@@ -24,13 +24,13 @@ export class TimerComponent {
   }
 
   start() {
-    if (this.minutes === 0 && this.seconds === 0) {
+    if (this.started || (this.minutes === 0 && this.seconds === 0)) {
       return;
     }
 
     this.started = true;
     const counter = rxjsInterval(1000);
-    this.interval = counter.subscribe(this.intervalCallback)
+    this.interval = counter.subscribe(this.intervalCallback.bind(this))
   }
 
   addFive() {
@@ -63,7 +63,6 @@ export class TimerComponent {
       this.stop();
       return;
     }
-    console.log('gleb')
 
     if (this.seconds > 0) {
       this.seconds--;
