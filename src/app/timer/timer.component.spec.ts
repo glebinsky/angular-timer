@@ -44,7 +44,7 @@ describe('TimerComponent', () => {
 
   it('check time edit functions', () => {
     component.addFive();
-    expect(component.minutes).toEqual(25);
+    expect(component.minutes).toEqual(30);
     component.minusFive();
     expect(component.minutes).toEqual(25);
     startButton.click();

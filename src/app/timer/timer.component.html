@@ -4,21 +4,21 @@
 
   <div id="timer">
     <div id="time">
-      <span id="minutes"></span>
+      <span id="minutes">{{minutes === 0 ? '00' : minutes}}</span>
       <span id="colon">:</span>
-      <span id="seconds"></span>
+      <span id="seconds">{{seconds === 0 ? '00' : seconds}}</span>
     </div>
 
   </div>
 
   <div id="buttons">
-    <button id="start">Start!</button>
+    <button id="start" (click)="start()">Start!</button>
 
-    <button id="stop">Stop</button>
-    <button id="reset">Reset</button>
+    <button id="stop" (click)="stop()">Stop</button>
+    <button id="reset" (click)="reset()">Reset</button>
     <br />
-    <button id="addFive">+5</button>
-    <button id="minusFive">-5</button>
+    <button id="addFive" (click)="addFive()">+5</button>
+    <button id="minusFive" (click)="minusFive()">-5</button>
   </div>
 
 </div>
