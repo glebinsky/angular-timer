@@ -24,10 +24,14 @@ user-select:none;
 }
 
 #time{
-margin-top: 60px;
-z-index: 1;
-position:relative;
+  margin-top: 60px;
+  z-index: 1;
+  position:relative;
 
+  span {
+    border: 1px solid black;
+    margin: 0;
+  }
 }
 
 #buttons button {
