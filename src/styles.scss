@@ -1,3 +1,7 @@
+body {
+  background: black;
+}
+
 #container{
   width:360px;
   height:360px;
@@ -7,6 +11,7 @@
 }
 
 #timer{
+  background: white;
   color:black;
   font-size: 50px;
   margin: 10px auto;
